@@ -7,6 +7,7 @@
     export let elementsToDisplay
     export let showingIndex
 
+    
     $: displayElement = elementsToDisplay[showingIndex]
 
     // CUSTOM EVENT WAS ZU PARENT BUBBLET FUERS SCHLIESSEN
