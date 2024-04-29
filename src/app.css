@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+    /* font-family: "Playfair Display"; */
+    font-family: "Rubik", sans-serif;
+}
+
+body{
+    margin: 2rem;
+}
+
+html{ 
+    scroll-behavior: smooth;
+}
