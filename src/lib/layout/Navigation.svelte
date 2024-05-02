@@ -71,13 +71,16 @@ nav{
     text-decoration: none;
     word-break: keep-all;
     text-transform: lowercase;
-}
-#name a:hover{
-    text-decoration: none;
-}  
+} 
 #nordweg {
     margin: 0;
     margin-right: -27px;
+}
+#name a:hover, #nordweg a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 7px;
+
 }
 
 
