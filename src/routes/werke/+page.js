@@ -20,8 +20,8 @@ export const load = async () => {
 		arbeiten[obj.Serie].push(obj)
 	});
 
-	console.log("__________________")
-	console.log(arbeiten)
+	// console.log("__________________")
+	// console.log(arbeiten)
 	// arbeiten = arbeiten
 
 	return {

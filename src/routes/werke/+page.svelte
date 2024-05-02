@@ -10,10 +10,11 @@
     export let data 
 
     let img
-    let selectedSerie = data.serien[0].id
+    $: selectedSerie = data.serien[0].id
     $: elementsToDisplay = data.arbeiten[selectedSerie] 
-    // console.log(elementsToDisplay)
-
+    $: elementsToDisplay.sort((b,a) => parseInt(a.Jahr, 10) - parseInt(b.Jahr, 10))
+    // $: console.log(elementsToDisplay)
+    
     let folder = []
 
     $: if (browser){
@@ -32,6 +33,7 @@
     let overlayOpen = false
     let arbeitShow
     let showingIndex
+
     function openOverlay(arbeit, index){
         overlayOpen = true
         arbeitShow = arbeit
