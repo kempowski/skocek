@@ -1,5 +1,6 @@
 <script>
     import Background from '$lib/layout/Background.svelte'
+    import TopButton from '$lib/layout/TopButton.svelte';
     import { getData } from "$lib/utils/getData";
     import { getImageURL, url } from '$lib/utils/getUrls.js';
     import { browser } from '$app/environment';
@@ -16,6 +17,7 @@
 </script>
 
 <p id="introText">
+    <img src={url + getImageURL(data.galerie_text[0].collectionId, data.galerie_text[0].id, data.galerie_text[0].Bild)} alt="">
     {@html data.galerie_text[0].Text}
 </p>
 
@@ -32,6 +34,7 @@
     </div>
 {/each}
 
+<TopButton></TopButton>
 {#if img}
 <Background image={img}></Background>
 {/if}

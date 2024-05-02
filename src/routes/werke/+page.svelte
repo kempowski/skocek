@@ -5,6 +5,7 @@
     import { getData } from "$lib/utils/getData";
     import { getImageURL, url } from '$lib/utils/getUrls.js';
     import { browser } from '$app/environment';
+    import { fade } from 'svelte/transition';
     
     export let data 
 
@@ -53,7 +54,7 @@
 <div id="wrapCard">
     <!-- {#if elementsToDisplay} -->
         {#each elementsToDisplay as arbeit, ix }
-            <div class="Card">
+            <div class="Card" in:fade>
                 <div class="wrapImg">
                     <img 
                         src={url + getImageURL(arbeit.collectionId, arbeit.id, arbeit.bild1, 400)} 

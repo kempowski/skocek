@@ -1,6 +1,6 @@
 <script>
     import '../app.css'
-    import { fade } from 'svelte/transition';
+    import { fly } from 'svelte/transition';
     import Navigation from '$lib/layout/Navigation.svelte';
     
 </script>
@@ -9,7 +9,7 @@
 
     <Navigation></Navigation>
 
-    <div id="content" in:fade>
+    <div id="content" in:fly>
         <slot></slot>
     </div>
 </div>*

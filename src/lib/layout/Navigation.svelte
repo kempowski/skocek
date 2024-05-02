@@ -36,12 +36,12 @@
                 <a href="/werke">Werke</a>
             </li>
             <li>
-                <a href="/galerie">Galerie Nordweg</a>
-            </li>
-            <li>
                 <a href="/kontakt">Kontakt</a>
             </li>
         </ul>
+        <h2 id="nordweg">
+            <a href="/galerie">Galerie Nordweg</a>
+        </h2>
     {/if}
     <button on:click={opener} id="menu">menu</button>
     <button on:click={opener} class:showExit={showMenu} class="close">schliessen</button>
@@ -62,7 +62,7 @@ nav{
     /* width: 200px; */
     margin-left: -15px;
 }
-#name a{
+#name a, #nordweg a{
     font-family: "Playfair Display";
     font-style: italic;
     font-size: 30pt;
@@ -70,10 +70,15 @@ nav{
     color: white;
     text-decoration: none;
     word-break: keep-all;
+    text-transform: lowercase;
 }
 #name a:hover{
     text-decoration: none;
 }  
+#nordweg {
+    margin: 0;
+    margin-right: -27px;
+}
 
 
 @media (min-width: 666px) {
@@ -84,7 +89,7 @@ nav{
         justify-content: space-between;
         padding: 0;
         margin: 0;
-        width: 60%;
+        width: 30%;
     }
     nav ul li {
         list-style-type: none;
