@@ -20,8 +20,16 @@
         z-index: -1;
         overflow: hidden;
         background-color: black;
+        display: flex;
+        justify-content: center;
     }
-    
+    div img{
+        /* position: absolute; */
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: 1200px;
+    }
 
 
     @media screen and (orientation: landscape){

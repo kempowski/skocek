@@ -21,10 +21,10 @@
 
 {#each data.galerie_events as event }
     <div>
-        <h3>{event.Datum.slice(0,4)}</h3>
+        <h3 class="Jahr">{event.Datum.slice(0,4)}</h3>
         <div>
-            <h2>{@html event.Titel}</h2>
-            <p>{@html event.Text}</p>
+            <h2 class="Name">{@html event.Titel}</h2>
+            <p class="Text">{@html event.Text}</p>
         </div>
         {#if event.Plakat !== ''}
             <img src={url + getImageURL(event.collectionId, event.id, event.Plakat)}>
@@ -38,7 +38,7 @@
 
 <style>
     #introText{
-        margin-bottom: 3hrem;
+        margin-bottom: 3rem;
     }
     div > * {
         margin: 0;
@@ -62,6 +62,10 @@
         flex-direction: column;
         justify-content: flex-start;
     }
+    .Jahr, .Name, .Text{
+        font-size: 1rem;
+    }
+
     img{
         width: 100%;
         justify-self: flex-end;

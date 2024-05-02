@@ -107,13 +107,16 @@
         overflow: hidden;
         display: flex; 
         /* align-items: center; */
+        overflow: hidden;
+    }
+    .wrapImg img{
+        width: 100%;
+        max-width: 500px;
+        aspect-ratio: auto;
     }
     .Card{
         width: fit-content;
         margin-bottom: 2rem;
-    }
-    .Card img{
-        width: 100%;
     }
     h3{
         font-size: 12pt;
@@ -144,10 +147,10 @@
             width: 49%;
         }
         .Card img{
-            width:auto;
+            /* width:100%; */
         }
         .wrapImg{
-            height: 300px;
+            /* height: 300px ; */
         }
     }
 

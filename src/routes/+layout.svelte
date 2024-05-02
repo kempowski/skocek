@@ -25,7 +25,7 @@
     #content{
         width: 100%;
         max-width: 800px;
-        min-height: 600px;
+        /* min-height: 600px; */
         padding: 1rem 2rem;
         background-color: rgba(255, 255, 255, 0.9);
         position: relative;

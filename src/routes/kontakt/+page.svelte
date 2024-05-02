@@ -14,18 +14,27 @@
         // console.log(img[0])
     }
 
-    // console.log(data)
 </script>
 
 {#each data.kontakt as entry}
+    <img src="{url + getImageURL(entry.collectionId, entry.id, entry.Bild)}" alt="">
     <p>{@html entry.Text}</p>
     <a href="mailto:{entry.Email}">{@html entry.Email}</a>
 
-    
 {/each}
 
 
 
 {#if img}
-<Background image={img}></Background>
+    <Background image={img}></Background>
 {/if}
+
+<style>
+    img{
+        width: 100%;
+    }
+
+    a {
+        color: black;
+    }
+</style>
