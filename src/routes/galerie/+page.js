@@ -3,13 +3,17 @@ import {pb} from "$lib/db"
 export const load = async () => {
 
 
-	let galerie = await pb.collection('Galerie_Nordweg').getFullList({
+	let galerie_events = await pb.collection('Galerie_Nordweg_Events').getFullList({
 		// sort: 'created',
 	})
+	let galerie_text = await pb.collection('Galerie_Nordweg_Text').getFullList({
 
-	galerie = galerie.sort((a, b) => new Date(b.Datum) - new Date(a.Datum));
+	})
+
+	galerie_events = galerie_events.sort((a, b) => new Date(b.Datum) - new Date(a.Datum));
 
 	return {
-		galerie,
+		galerie_events,
+		galerie_text
 	}
 }

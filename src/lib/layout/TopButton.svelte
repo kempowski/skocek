@@ -32,9 +32,11 @@
         position: fixed;
         bottom: 0; 
         right: 1rem;
-        margin: 0 1rem 2rem 0;
+        margin: 0 0rem 2rem 0;
         opacity: 0;
-        background-color: transparent;
+        background-color: white;
+        border-radius: 100%;
+        padding: 0.5rem;
         border: none;
     }
     .showButton{

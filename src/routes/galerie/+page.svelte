@@ -11,11 +11,15 @@
     $: if (browser){
         let imgData = getData()
         img = imgData.hintergrundbild
-        // console.log(img[0])
     }
+    console.log(data.galerie_text[0].Text)
 </script>
 
-{#each data.galerie as event }
+<p id="introText">
+    {@html data.galerie_text[0].Text}
+</p>
+
+{#each data.galerie_events as event }
     <div>
         <h3>{event.Datum.slice(0,4)}</h3>
         <div>
@@ -33,6 +37,9 @@
 {/if}
 
 <style>
+    #introText{
+        margin-bottom: 3rem;
+    }
     div > * {
         margin: 0;
     }

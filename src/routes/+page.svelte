@@ -26,7 +26,8 @@
 
 <style>
     div{
-        max-width: 60%;
+        max-width: 100%;
+        padding: 4rem;
         line-height: 25px;
     }
 </style>
