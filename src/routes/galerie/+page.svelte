@@ -38,7 +38,7 @@
 
 <style>
     #introText{
-        margin-bottom: 3rem;
+        margin-bottom: 3hrem;
     }
     div > * {
         margin: 0;
