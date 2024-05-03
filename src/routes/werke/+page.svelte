@@ -7,6 +7,7 @@
     import { browser } from '$app/environment';
     import { fade } from 'svelte/transition';
     
+    
     export let data 
 
     let img
@@ -120,6 +121,7 @@
     .Card{
         width: fit-content;
         margin-bottom: 2rem;
+        color:white; 
     }
     h3{
         font-size: 12pt;
@@ -134,9 +136,10 @@
         border: none;
         width: fit-content;
         margin: 0.5rem 0;
+        background-color: transparent;
+        color: white;
     }
     .serieButton:hover{
-        background-color: transparent;
     }
     .selectedSerie{
         border-bottom: 2px solid;
