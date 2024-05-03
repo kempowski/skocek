@@ -10,7 +10,7 @@
         vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
     }
     
-    $: if (vw > 666){
+    $: if (vw > 750){
         showMenu = true
     }
 
@@ -28,20 +28,24 @@
         <a href="/">günter skocek</a>
     </h1>
     {#if showMenu}
-        <ul in:fly out:fly>
-            <li>
-                <a href="/uber">Über</a>
-            </li>
-            <li>
-                <a href="/werke">Werke</a>
-            </li>
-            <li>
-                <a href="/kontakt">Kontakt</a>
-            </li>
-        </ul>
-        <h2 id="nordweg">
-            <a href="/galerie">Galerie Nordweg</a>
-        </h2>
+        <div id="menuWrap" 
+            in:fly out:fly
+            >
+            <ul >
+                <li>
+                    <a href="/uber" on:click={opener}>Über</a>
+                </li>
+                <li>
+                    <a href="/werke" on:click={opener}>Werke</a>
+                </li>
+                <li>
+                    <a href="/kontakt" on:click={opener}>Kontakt</a>
+                </li>
+            </ul>
+            <h2 id="nordweg">
+                <a href="/galerie" on:click={opener}>Galerie Nordweg</a>
+            </h2>
+        </div>
     {/if}
     <button on:click={opener} id="menu">menu</button>
     <button on:click={opener} class:showExit={showMenu} class="close">schliessen</button>
@@ -59,10 +63,10 @@ nav{
 #name{
     margin: 0;
     justify-self: start;
-    /* width: 200px; */
+    width: 360px;
     margin-left: -15px;
 }
-#name a, #nordweg a{
+#name a {
     font-family: "Playfair Display";
     font-style: italic;
     font-size: 30pt;
@@ -80,19 +84,17 @@ nav{
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-underline-offset: 7px;
-
 }
 
 
-@media (min-width: 666px) {
-
+@media (min-width: 750px) {
     nav ul{
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
         padding: 0;
         margin: 0;
-        width: 30%;
+        width: 295px;
     }
     nav ul li {
         list-style-type: none;
@@ -112,17 +114,37 @@ nav{
         text-decoration-thickness: 3px;
         text-underline-offset: 2px;
     }
-    
+    #menuWrap{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
     #menu{
         display: none;
     }
     .close{
         display: none;
     }
+    #nordweg a{
+        font-family: "Playfair Display";
+        font-style: italic;
+        font-size: 30pt;
+        font-weight: 100;
+        color: white;
+        text-decoration: none;
+        word-break: keep-all;
+        text-transform: lowercase;
+    } 
+    #nordweg {
+        justify-self: flex-end;
+        margin: 0;
+        margin-right: -27px;
+        /* width: 450px; */
+    }
 }
 
-@media (max-width: 666px){
-    nav ul {
+@media (max-width: 750px){
+    #menuWrap {
         position: absolute;
         left: 0;
         top: 0;
@@ -137,16 +159,32 @@ nav{
         z-index: 2;
         padding: 0 5rem;
     }
+    nav ul {
+        padding: 0;
+        margin: 0
+    }
     nav ul li {
         list-style: none;
         margin-bottom: 3rem;
         border-bottom: 2px solid;
     }
-    nav ul li a {
+    nav ul li a, #nordweg a {
         text-decoration: none;
         color: black;
         font-size: 24pt;
+        font-weight: 400;
     }
+    #nordweg{
+        border-bottom: 2px solid;
+        margin-right: 0;
+    }
+    #nordweg a{
+        text-decoration: none;
+    }
+    #nordweg a:hover{
+        text-decoration: none;
+    }
+
     #menu {
         margin: 0;
         background-color: transparent;

@@ -13,7 +13,8 @@
         let imgData = getData()
         img = imgData.hintergrundbild
     }
-    console.log(data.galerie_text[0].Text)
+    // console.log(data.galerie_text[0].Text)
+
 </script>
 
 <p id="introText">

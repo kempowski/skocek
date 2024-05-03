@@ -47,19 +47,33 @@
 
 
 <style>
-    nav{
-        position: fixed ;
-        right: calc((100vw - 800px)/2);
-        margin: 1rem 1rem 0 0;
+
+    nav {
         display: flex;
         flex-direction: column;
         text-align: right;
     }
-    nav a {
+    nav a{
         color: black;
-        margin: 0.2rem 0;
+        line-height: 17pt;
     }
-    p {
-        max-width: 60%;
+    
+    @media screen and (min-width: 850px){
+        nav{
+            position: fixed ;
+            right: calc((100vw - 800px)/2);
+            margin: 1rem 1rem 0 0;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+        nav a {
+            color: black;
+            margin: 0.2rem 0;
+        }
+        p {
+            max-width: 60%;
+        }
+
     }
 </style>
