@@ -16,7 +16,10 @@
 
     
     function opener(){
-        showMenu = !showMenu
+        if (vw < 750){
+            showMenu = !showMenu
+
+        }
     }
 
 

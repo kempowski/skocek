@@ -13,13 +13,13 @@
 <style>
     div{
         width: 100svw;
-        height: 100svh;
+        height: 100dvh;
         position: fixed;
         top: 0;
         left: 0;
         z-index: -1;
         overflow: hidden;
-        background-color: black;
+        background-color: rgb(139, 139, 139);
         display: flex;
         justify-content: center;
     }

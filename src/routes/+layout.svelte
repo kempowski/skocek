@@ -22,7 +22,7 @@
     <div id="content" in:fly class="{blackBG ? 'blackBG' : 'whiteBG'}">
         <slot></slot>
     </div>
-</div>*
+</div>
 
 
 <style>
