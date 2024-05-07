@@ -12,7 +12,7 @@
 
 <style>
     div{
-        width: 100svw;
+        width: 100lvw;
         height: 100dvh;
         position: fixed;
         top: 0;
