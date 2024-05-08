@@ -10,6 +10,8 @@
     
     $: displayElement = elementsToDisplay[showingIndex]
 
+    $: console.log(displayElement)
+
     // CUSTOM EVENT WAS ZU PARENT BUBBLET FUERS SCHLIESSEN
     function handleExit(){
         dispatch("handleExit", {closeOverlay: true})
@@ -58,6 +60,7 @@
             {displayElement.Format}
             {displayElement.Jahr}
         </h3>
+        {@html displayElement.text}
     </div>
     
     <div class="navButtons">
