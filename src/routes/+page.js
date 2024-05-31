@@ -1,19 +1,21 @@
-import {pb} from "$lib/db"
+// import {pb} from "$lib/db"
 
-// is statement fuer language hier?
+// // is statement fuer language hier?
 
-export const load = async () => {
+// export const load = async () => {
+
+// 	// POCKETBASE
+// 	const startseite = await pb.collection('Startseite').getFullList({
+// 		sort: 'created',
+// 	})
+// 	const hintergrundbild = await pb.collection('hintergrundbild').getFullList({
+// 		sort: 'created',
+// 	})
+
+// 	return {
+// 		startseite,
+// 		hintergrundbild 
+// 	}
+// }
 
 
-	const startseite = await pb.collection('Startseite').getFullList({
-		sort: 'created',
-	})
-	const hintergrundbild = await pb.collection('hintergrundbild').getFullList({
-		sort: 'created',
-	})
-
-	return {
-		startseite,
-		hintergrundbild
-	}
-}

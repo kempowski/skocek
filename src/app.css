@@ -6,8 +6,13 @@
 
 body{
     margin: 23px;
+    overflow-x: hidden;
 }
 
 html{ 
     scroll-behavior: smooth;
+}
+
+.noScroll{
+    overflow-y: hidden;
 }

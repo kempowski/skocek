@@ -2,8 +2,10 @@
     import { writable } from 'svelte/store';
     import { browser } from '$app/environment';
     import Background from '$lib/layout/Background.svelte'
+    import Cookies from '$lib/utils/Cookies.svelte'
 
     export let data 
+
 
     export const backgroundImg = writable(data.hintergrundbild)
     // console.log(backgroundImg)
@@ -15,6 +17,7 @@
     }
 </script>
 
+<Cookies visited={data.visited} accepted={data.accepted}></Cookies>
 
 
 <div>

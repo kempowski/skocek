@@ -9,8 +9,7 @@
 
     
     $: displayElement = elementsToDisplay[showingIndex]
-
-    $: console.log(displayElement)
+    // $: console.log(displayElement)
 
     // CUSTOM EVENT WAS ZU PARENT BUBBLET FUERS SCHLIESSEN
     function handleExit(){

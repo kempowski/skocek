@@ -3,8 +3,10 @@
     import { fly } from 'svelte/transition';
     import Navigation from '$lib/layout/Navigation.svelte';
     import { page } from '$app/stores';
+    import Analytics from '$lib/utils/Analytics.svelte';
+    import { analytics } from '$lib/store';
     
-    console.log($page.route.id)
+    // console.log($page.route.id)
 
     let blackBG = false
     $: if ($page.route.id === '/werke'){
@@ -12,6 +14,13 @@
     } else {
         blackBG = false
     }
+
+    let cookieOK = ''
+    analytics.subscribe((value) => {
+        console.log(value)
+        cookieOK = value
+    })
+    // console.log(analytics)
 
 </script>
 
@@ -24,6 +33,11 @@
     </div>
 </div>
 
+{#if cookieOK === "accepted"}
+    <Analytics></Analytics>
+<!-- {:else if cookieOK === "declined"} -->
+    <!-- {console.log("declined")} -->
+{/if}
 
 <style>
     #wrap{
